@@ -1,0 +1,24 @@
+https://github.com/gorkaydemir/ADAPT
+
+# argoverse install
+pip install -e .
+conda install mkl=2024.0 mkl-devel=2024.0 mkl-include=2024.0 --yes
+# dataset link
+ln -s /home/cv9/smin/next/Data/Argoverse1.1 ./data
+
+
+
+# conda environment
+conda activate adapt
+
+# dataset preprocessing
+python dataset/preprocess_data.py --data_dir ./data/train/data --output_dir ./predata
+python dataset/preprocess_data.py --data_dir ./data/val/data --output_dir ./predata --validation
+python dataset/extend_dataset.py --data_dir ./predata/ex_list --output_dir ./predata
+
+# train
+CUDA_VISIBLE_DEVICES=4,5,6,7 python run.py --ex_file_path ./predata/extended_ex_list --val_ex_file_path ./predata/eval.ex_list --model_save_path checkpoints/exp0 --static_agent_drop --scaling
+
+
+
+

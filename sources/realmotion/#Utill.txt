@@ -1,0 +1,28 @@
+# dataset link
+ln -s /home/cv9/smin/next/Data/Argoverse2/train ./RealMotion/data/train
+ln -s /home/cv9/smin/next/Data/Argoverse2/test ./RealMotion/data/test
+ln -s /home/cv9/smin/next/Data/Argoverse2/val ./RealMotion/data/val
+
+
+
+# conda environment
+conda activate motion
+
+# Data Preprocess
+python preprocess.py -d ./data -p
+
+# Train
+CUDA_VISIBLE_DEVICES=4,5,6,7 python train.py
+
+# Val
+CUDA_VISIBLE_DEVICES=4,5,6,7 python eval.py checkpoint=./outputs/RealMotion-av2_3frame_30his/20250512-143009/checkpoints/epoch_79-minADE6_0.6706352829933167.ckpt
+
+# Test for submission
+CUDA_VISIBLE_DEVICES=7 python eval.py checkpoint=./outputs/RealMotion-av2_3frame_30his/20250512-143009/checkpoints/epoch_79-minADE6_0.6706352829933167.ckpt submit=true
+
+
+
+# Tensorboard
+tensorboard --logdir ./outputs/RealMotion-av2_3frame_30his/20250512-143009/lightning_logs/ --port 8888
+
+

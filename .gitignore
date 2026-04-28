@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Local environments and editor state
+.vscode/
+.DS_Store
+.env
+.venv/
+venv/
+
+# Datasets and generated artifacts
+Data/
+data/
+predata/
+checkpoints/
+checkpoint/
+lightning_logs/
+outputs/
+output/
+test_output/
+submission/
+wandb/
+
+# Large model/data files
+*.ckpt
+*.pt
+*.pth
+*.pkl
+*.parquet
+*.h5
+*.tar
+*.tar.gz
+*.zip

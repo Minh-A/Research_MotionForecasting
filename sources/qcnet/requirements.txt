@@ -1,0 +1,9 @@
+pandas
+pyarrow
+fastparquet
+cython
+av2==0.2.1
+
+
+
+
