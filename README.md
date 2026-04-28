@@ -32,14 +32,6 @@ must be downloaded or regenerated separately.
 
 See `docs/DATASETS.md` for the expected dataset layout.
 
-## Research Timing
-
-Based on local clone times, notes, logs, checkpoints, and generated files, this
-research appears to have been active mainly from 2025-05-09 to 2025-06-20, with
-a later local check on 2025-07-08.
-
-See `docs/TIMELINE.md` for details.
-
 ## Repository Layout
 
 ```text
@@ -47,8 +39,7 @@ See `docs/TIMELINE.md` for details.
 ├── docs/
 │   ├── DATASETS.md
 │   ├── EXCLUDED_ARTIFACTS.md
-│   ├── SOURCE_MAP.md
-│   └── TIMELINE.md
+│   └── SOURCE_MAP.md
 └── sources/
     ├── adapt/
     ├── hivt/
