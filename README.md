@@ -17,6 +17,22 @@ not included in this GitHub repository.
 | `sources/adapt` | ADAPT | Argoverse 1.1 | Argoverse 1 trajectory forecasting baseline |
 | `sources/hpnet` | HPNet | Argoverse 1.1, INTERACTION | Historical prediction attention baseline |
 
+## Visual Summary
+
+The archive keeps lightweight figures from the included motion forecasting projects. These are useful for quickly identifying the modeling direction of each source tree without restoring the full datasets or checkpoints.
+
+| ADAPT | RealMotion |
+| --- | --- |
+| <img src="sources/adapt/figures/pipeline.png" width="420" alt="ADAPT pipeline figure"> | <img src="sources/realmotion/assets/pipeline.png" width="420" alt="RealMotion pipeline figure"> |
+
+| QCNet | HiVT |
+| --- | --- |
+| <img src="sources/qcnet/assets/qcnet_viz.png" width="420" alt="QCNet visualization figure"> | <img src="sources/hivt/assets/overview.png" width="420" alt="HiVT overview figure"> |
+
+| HPNet |
+| --- |
+| <img src="sources/hpnet/assets/HPNet.png" width="720" alt="HPNet architecture figure"> |
+
 ## Local Dataset Status
 
 The original `/h0/next` folder contained real datasets and processed artifacts:
